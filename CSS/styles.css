@@ -1,0 +1,205 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    margin: auto;
+    width: 90%;
+    max-width: 900px;
+}
+
+.main__navbar{
+    background-color: rgb(9, 61, 13);
+    padding:  10px 0px;
+    margin-bottom: 10px;
+}
+
+.main__navbar .main-button-container{
+    display: none;
+    justify-content: space-between;
+}
+
+.main__navbar .main-button-container button{
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    display: inline-block;
+    cursor: pointer;
+    background: none;
+}
+
+.main__navbar .main-button-container button:hover{
+    border: 1px solid rgba(255, 255, 255, .4);
+}
+
+.main__navbar .main-button-container .btn-close-menu{
+    display: none;
+}
+
+.main__navbar .main-button-container .btn-close-menu.active{
+    display: inline-block;
+}
+
+.main__navbar .link-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__navbar .btn-brand{
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    cursor: default;
+}
+
+.main__navbar .btn-brand:hover{
+    border: 1px solid rgba(255, 255, 255, .4);
+}
+
+.main__navbar .btn-brand i{
+    margin-left: 1rem;
+    position: relative;
+    bottom: 0.1rem;
+}
+
+.main__navbar .link-container .links a{
+    color: #ffffff;
+    border: 1px solid transparent;
+    padding: 0.4rem;
+    border-radius: 0.12rem;
+    font-size: 0.75rem;
+}
+
+.main__navbar .link-container .links a:hover{
+    border: 1px solid rgba(255, 255, 255, .4);
+}
+
+.grid-container{
+    position: relative;
+}
+
+.grid{
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 0.6rem;
+    z-index: 100;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 'categories subcategories';
+}
+
+.grid.active {
+    display: grid;
+}
+
+.grid::before {
+    content: "";
+    display: block;
+    background: transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #ffffff;
+    position: absolute;
+    top: -0.3rem;
+    left: 6rem;
+}
+
+.grid > div{
+    background: #ffffff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .4);
+}
+
+.grid .btn-back{
+    background: rgb(8, 29, 70);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+.grid .btn-back i{
+    margin-right: 0.5rem;
+}
+
+#admin-button{
+    background-color: rgb(109, 197, 168);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 4rem;
+}
+
+#admin-button.click{
+    background-color: rgb(255, 255, 255);
+}
+
+.admin-panel{
+    box-shadow: 1px 0px 7px rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 40rem;
+    z-index: 100;
+    display: none;
+}
+
+.admin-panel-form{
+    margin: auto;
+    width: 90%;
+    height: 100%;
+}
+
+.admin-form-items{
+    height: 100%;
+}
+
+.admin-form-item{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30%;
+}
+
+.admin-form-item p{
+    font-size: 1.1rem;
+}
+
+.admin-form-item input{
+    outline: none;
+    height: 2rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, .6);
+}
+
+.admin-form-item button{
+    width: 100%;
+    height: 40%;
+    font-size: 1.25rem;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 3px rgba(18, 156, 122, 0.2);
+    background-color: rgb(26, 156, 106);
+}
+
+.admin-panel.show{
+    display: inline-block;
+}
