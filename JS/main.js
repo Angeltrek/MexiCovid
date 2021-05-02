@@ -1,5 +1,6 @@
 const admin_button = document.getElementById('admin-button');
 const admin_panel = document.querySelector('.admin-panel');
+const admin_acces = document.querySelector('.admin-acces');
 const acces = document.getElementById('acces');
 
 
@@ -11,6 +12,7 @@ admin_button.addEventListener('click', () => {
         admin_panel.classList.remove('show');
         document.getElementById('user').value = '';
         document.getElementById('password').value = '';
+        admin_acces.classList.remove('show');
     }
 });
 
@@ -18,7 +20,9 @@ acces.addEventListener('click', () =>{
     var user = document.getElementById('user').value;
     var password = document.getElementById('password').value;
 
-    if(user === "admin" && password === "administrator") alert('accedio');
+    if(user === "admin" && password === "administrator") {
+        admin_acces.classList.add('show');
+    }
     else alert('no se ha podido acceder');
 });
 
@@ -26,10 +30,10 @@ acces.addEventListener('click', () =>{
 
 const btnMenu=document.querySelector("#btnMenu");
 const menu=document.querySelector("#menu");
+const main_container = document.querySelector('.main-container') 
 
 btnMenu.addEventListener("click",function(){
 	menu.classList.toggle("mostrar");
-
 });
 
 const subMenuBTN=document.querySelectorAll(".submenu-btn");
@@ -61,47 +65,22 @@ for (var i = 0 ; i < subMenuBTN.length; i++) {
 
 var questionContainer = [
     {
-        question : 'Hello?',
-        options : ['No','No','Pancho','NO'],
-        correctOption : 'Pancho'
+        question : 'En qué fecha surgió el primer brote del COVID-19?',
+        options : ['Febrero 2018','Enero 2019','Diciembre 2019','Enero 2020'],
+        correctOption : 'Diciembre 2019'
     },
     {
-        question : 'Hi?',
-        options : ['Correct','No','No','No'],
-        correctOption : 'Correct'
+        question : 'Cuáles son las etapas del semaforo epidemiologico?',
+        options : ['Rojo Naranja Amarillo Verde','Naranja Amarillo Verde Azul','Rojo Naranja Lila Verde','Negro Naranja Amarillo Verde'],
+        correctOption : 'Rojo Naranja Amarillo Verde'
     },
     {
-        question : 'No',
-        options : ['No','Correct','No','No'],
-        correctOption : 'Correct'
+        question : 'De dónde llegó el primer brote de COVID-19 a México?s',
+        options : ['Italia','Estados Unidos','China','Ninguna de las anterioress'],
+        correctOption : 'Italia'
     },
     {
-        question : 'No',
-        options : ['No','Correct','No','No'],
-        correctOption : 'Correct'
-    },
-    {
-        question : 'Hello?',
-        options : ['No','No','Correct','NO'],
-        correctOption : 'Correct'
-    },
-    {
-        question : 'Hi?',
-        options : ['Correct','No','No','No'],
-        correctOption : 'Correct'
-    },
-    {
-        question : 'No',
-        options : ['No','Correct','No','No'],
-        correctOption : 'Correct'
-    },
-    {
-        question : 'No',
-        options : ['No','Correct','No','No'],
-        correctOption : 'Correct'
-    },
-    {
-        question : 'Congratulations you have finished the Quiz',
+        question : 'Felicidades, Haz terminado el Quiz!!',
     },
 ];
 
@@ -158,16 +137,21 @@ goNext.addEventListener('click', () => {
 });
 
 restart.addEventListener('click', () => {
+    res();
+});
+
+start.addEventListener('click', () =>{
+    res();
+    quiz_container.classList.toggle('show');
+    stat.innerHTML = i+1 + " / " + quiz_length;
+})
+
+function res(){
     i = 0;
     correct = 0;
     stat.innerHTML = '1 / ' + quiz_length;
     results.innerHTML = correct + ' / ' + quiz_length;
     displayQuestion();
-});
-
-start.addEventListener('click', () =>{
-    quiz_container.classList.toggle('show');
-    stat.innerHTML = i+1 + " / " + quiz_length;
-})
+}
 
 displayQuestion();

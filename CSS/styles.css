@@ -57,21 +57,15 @@
 	transition: all 0.5s;
 }
 
+.submenu-btn i{
+    top: -10px;
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+}
+
 .submenu-btn:hover i{
 	transition: 0.3s;
 	transform: rotateX(-180deg);
-}
-
-.submenu::before{
-    content: "";
-    display: block;
-    background: transparent;
-    border-left: 13px solid transparent;
-    border-right: 13px solid transparent;
-    border-bottom: 13px solid white;
-    position: absolute;
-    top: -13px;
-    left: 0px;
 }
 
 .submenu .menu_link{
@@ -86,8 +80,15 @@
     background:orange;
 }
 
+.main-container{
+    position: absolute;
+    z-index: 100;
+}
+
 .mostrar{
+    transition: 0.3s;
     margin-left: 0;
+    width: 100%;
 }
 
 @media(min-width: 1024px){
@@ -96,6 +97,9 @@
     }
     .main-nav{
         background-color: rgb(90, 167, 141);
+    }
+    .main-container{
+        position: relative;
     }
 	.nav-bar{display: none;}
 	.menu{margin-left: 0px;
@@ -113,6 +117,18 @@
 		opacity: 1;
 		visibility: visible;
 	}
+    .submenu::before{
+        content: "";
+        display: block;
+        background: transparent;
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-bottom: 13px solid white;
+        position: absolute;
+        top: -13px;
+        left: 0px;
+    }
+    
 }
 
 .nav-item-container{
@@ -139,11 +155,14 @@
 }
 
 .admin-panel{
-    box-shadow: 1px 0px 7px rgba(0, 0, 0, .4);
     width: 100%;
     height: 40rem;
-    z-index: 100;
     display: none;
+    background: url(https://gacetamedica.com/wp-content/uploads/2020/03/GettyImages-1202707966.jpg)
+    no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter:grayscale(20%);
 }
 
 .admin-panel-form{
@@ -163,10 +182,12 @@
     align-items: center;
     justify-content: space-around;
     height: 30%;
+    color: #fff;
 }
 
 .admin-form-item p{
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .admin-form-item input{
@@ -192,6 +213,27 @@
     display: inline-block;
 }
 
+.admin-acces{
+    background-color: rgb(26, 156, 106);
+    width: 100%;
+    height: 4rem;
+    font-size: 1rem;
+    padding: 20px;
+    color: #fff;
+    display: none;
+    margin: auto;
+    left: 0px;
+}
+
+.admin-acces a{
+    color: rgb(235, 235, 211);
+}
+
+.admin-acces.show{
+    display: block;
+    position: absolute;
+    overflow: hidden;
+}
 /*Quiz section*/
 
 .quiz-container{
@@ -272,3 +314,124 @@
     display: block;
     transition: 1s all ease;
 }
+
+/* form section*/
+
+.form-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-item{
+    width: 100%;
+    padding: 20px;
+}
+
+.form-item input[type="submit"]{
+    background-color: rgb(122, 218, 186);
+    outline: none;
+    border: none;
+    height: 3rem;
+    border-radius: 10px;
+}
+
+/*background*/
+
+.topic-background{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topic-background img{
+    width: 100%;
+    height: 650px;
+    object-fit:cover;
+}
+
+/*Info section*/
+
+.tes{
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 1rem;
+    margin: 1rem 0px;
+}
+
+.ima{
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, .2);
+}
+
+.info-container{
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+}
+
+.list-info{
+    margin-top: 6rem;
+}
+
+.redo{
+    color: red;
+}
+.oran{
+    color:orangered;
+}
+.amari{
+    color:rgb(255, 208, 0);
+}
+.gre{
+    color: green;
+}
+
+/*index*/
+
+.pdf-link{
+    text-decoration: none;
+}
+
+.pdf{
+    width: 6rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(211, 85, 85);
+    color: white;
+    font-weight: 700;
+}
+
+/*footer*/
+
+footer{
+    background-color: #0000008f;
+    height: 260px;
+    margin-top: 80px;
+}
+
+.footer-nav span{
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-nav a{
+    color: #fff;
+}
+
+.footer-nav a:hover{
+    color: rgb(101, 253, 172);
+}
+
+.mail{
+    color: rgb(0, 255, 200);
+}
+
+

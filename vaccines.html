@@ -11,10 +11,10 @@
 </head>
 <body>
 
-    <span class="nav-bar" id="btnMenu"><i class="fas fa-bars"></i>   MexiCovid   Menu </span>
+    <span class="nav-bar" id="btnMenu"><i class="fas fa-bars"></i> Menu </span>
 
 	<nav class="main-nav">
-        <div class="container">
+        <div class="main-container container">
             <ul class="menu" id="menu">
                 <li>
                     <div class="nav-item-container">
@@ -28,9 +28,9 @@
                     <a href="#" class="menu_link submenu-btn">Historia<i class="fas fa-sort-up"></i></a> 
                         <ul class="submenu">
                             <!--SUBMENUSS-->
-                            <li class="menu_item"><a href="history.html" class="menu_link">Origen</a> </li>
-                            <li class="menu_item"><a href="history.html" class="menu_link">2020</a> </li>
-                            <li class="menu_item"><a href="history.html" class="menu_link">Actualidad</a> </li>
+                            <li class="menu_item"><a href="history.html#Origin" class="menu_link">Origen</a> </li>
+                            <li class="menu_item"><a href="history.html#Actual" class="menu_link">Actualidad</a> </li>
+                            <li class="menu_item"><a href="history.html#Quiz" class="menu_link">Quiz</a> </li>
                         </ul>
                 </li>
                 
@@ -38,8 +38,8 @@
                     <a href="#" class="menu_link submenu-btn">Vacunaci&oacuten<i class="fas fa-sort-up"></i></a> 
                         <ul class="submenu">
                             <!--SUBMENUSS-->
-                            <li class="menu_item"><a href="vaccines.html" class="menu_link">Estados</a> </li>
-                            <li class="menu_item"><a href="vaccines.html" class="menu_link">Vacunas</a> </li>
+                            <li class="menu_item"><a href="vaccines.html#Vaccines" class="menu_link">Vacunas</a> </li>
+                            <li class="menu_item"><a href="vaccines.html#Steps" class="menu_link">Etapas</a> </li>
                         </ul>
                 </li>
                 <li class="menu_item"><a href="about.html" class="menu_link">Acerca de</a> </li>
@@ -53,31 +53,177 @@
 	</nav>
     
 
-    <div class="container">
-        <div class="admin-panel" id="admin-panel">
-            <div class="admin-panel-form">
-                <div class="admin-form-items">
-                    <div class="admin-form-item">
-                        <p>Nombre de usuario</p>
-                        <input type="text" id="user">
-                    </div>
-                    <div class="admin-form-item">
-                        <p>Contraseña de usuario</p>
-                        <input type="password" id="password">
-                    </div>
-                    <div class="admin-form-item">
-                        <button id="acces">Acceder</button>
-                    </div>
+    <div class="admin-panel" id="admin-panel">
+        <div class="admin-panel-form">
+            <div class="admin-form-items">
+                <div class="admin-form-item">
+                    <p>Nombre de usuario</p>
+                    <input type="text" id="user">
                 </div>
+                <div class="admin-form-item">
+                    <p>Contraseña de usuario</p>
+                    <input type="password" id="password">
+                </div>
+                <div class="admin-form-item">
+                    <button id="acces">Acceder</button>
+                </div>
+            </div>
+            <div class="admin-acces">
+                <span>Ahora puedes acceder al codigo de la página <a href="https://github.com/Angeltrek/MexiCovid" target="_blank">MexiCovid</a></span>
             </div>
         </div>
     </div>
 
-    <main>
-       <p></p>
+    <div class="topic-background">
+        <img src="https://www.paho.org/sites/default/files/styles/flexslider_full/public/2020-07/covid-19-vaccine-1500x856.jpg?h=bf8565ea&itok=TgoE8tWr" alt="">
+    </div>
+
+    <main class="container">
+        <div class="info-container">
+                <h1 id="Vaccines">Vacunas</h1>
+                <div class="co"><img class="ima" src="https://www.wboy.com/wp-content/uploads/sites/43/2021/03/COVID-vaccine-1-1.jpg?w=1280" ></div>
+                <p class="tes">El covid-19 fue una gran enfermedad que causo una pandemia mundial por ello varios paises empezaron a crear vacunas para poder contrarestar esta gran enfermedad, gracias a la perseverancia de varios paises.<br>
+                    El primer programa de vacunación colectiva se puso en marcha a principios de 2020 y, al 15 de febrero de 2021, ya se han administrado 175,3 millones de dosis. Por el momento, se están utilizando siete vacunas distintas a través de tres plataformas.
+                    El 31 de diciembre de 2020, la OMS dio luz verde a la inclusión en la Lista para uso en emergencias (EUL, por sus siglas en inglés) de la vacuna de Pfizer contra la COVID-19 (BNT162b2). El 15 de febrero de 2021, incluyó también dos versiones de la vacuna AstraZeneca/Oxford contra la COVID-19, fabricadas por el Serum Institute de la India y SKBio. El 12 de marzo de 2021, aceptó la inclusión de la vacuna contra la COVID-19 Ad26.COV2.S, desarrollada por Janssen (Johnson & Johnson). Asimismo, la OMS ha previsto incluir en la lista otras vacunas durante el mes de junio. 
+                    Al menos 73 vacunas contra el mortal coronavirus están actualmente en desarrollo a nivel mundial, según el rastreador de vacunas COVID-19 dirigido por un equipo de epidemiólogos y expertos de la Universidad McGill, en EE. UU. Seis medicamentos han pasado las barreras.
+                </p>
+
+                <h2>Vacunas sacadas</h2>
+        
+                <ul><li><h3>Moderna</h3></li></ul>
+                
+                <p class="tes">
+                    
+                La vacuna producida por la compañía biotecnológica estadounidense Moderna fue aprobada en EE. UU. en diciembre. Este 6 de diciembre, con el respaldo de la EMA, la Comisión Europea otorgó una licencia condicional a la farmacéutica estadounidense Moderna.<br>
+                Moderna ha dicho que producirá la "mayor parte" de su vacuna en Cambridge, Massachusetts, su sede. Planea producir un mínimo de 600 millones de dosis este año, con la meta de producir hasta 1.000 millones de dosis en 2021.<br>
+                La Unión Europea ha pedido 80 millones de dosis con la opción de comprar 80 millones adicionales, mientras que Estados Unidos se ha asegurado 200 millones de dosis con la opción de comprar otros 300 millones. El Reino Unido, Japón, Suiza y Corea del Sur también han reservado dosis. Canadá, que también ha aprobado el fármaco, ha reservado 40 millones de dosis.	
+            </p>
+            
+            
+            <ul><li><h3>Oxford-AstraZeneca</h3></li></ul>
+                <p class="tes">
+                    La vacuna desarrollada por el fabricante sueco-británico, en asociación con la Universidad de Oxford, ha sido aprobada para su uso en el Reino Unido, India y Argentina. Esperan producir unos 3 mil millones de dosis en 2021, dijo el director del Instituto Jenner de Oxford, Adrian Hill.<br>
+                    La producción de una vacuna global ha requerido el establecimiento de "cadenas de suministro regionales que consisten en más de 20 socios de suministro en más de 15 países", dijo Per Alfredsson, vicepresidente de Operaciones Globales de Biología de AstraZeneca.<br>
+                    Los suministros iniciales de la vacuna en Europa vendrán de Alemania y Bélgica, aseguró, por su parte Ian McCubbin, jefe de fabricación del Grupo de Trabajo sobre Vacunas en el Reino Unido. Las dosis también serán producidas en la India por el Serum Institute of India, el mayor fabricante de vacunas del mundo.
+                </p>
+            
+            <ul><li><h3>BioNTech-Pfizer</h3></li></ul>
+                <p class="tes">
+                    La primera vacuna contra el coronavirus autorizada para su uso en la UE –desarrollada por la empresa biotecnológica alemana BioNTech y el gigante farmacéutico estadounidense Pfizer– también ha sido aprobada para su uso en Estados Unidos, Reino Unido, México, Chile y Colombia, así como en al menos otros 19 países.
+                    La vacuna se está produciendo en las instalaciones de BioNtech y Pfizer en Alemania y Bélgica, así como en otros países.<br>
+                    Como parte de su estrategia de vacunación, la UE ha asegurado acuerdos con seis productores. En respuesta, la compañía con sede en Mainz ha dicho que pretende comenzar la producción en febrero en una nueva planta de fabricación en Marburgo, Alemania. BioNTech ha dicho que la nueva sede debería producir 250 millones de dosis adicionales en la primera mitad de este año, para una capacidad de producción total de 750 millones de dosis al año.<br>
+                    Juntos, Pfizer y BioNtech proyectan que producirán hasta 1.300 millones de dosis para uso mundial en 2021, dijo Pfizer en un comunicado de prensa. La UE ha reservado 300 millones de dosis y los EE. UU. 200 millones.
+                </p>
+            
+                <ul><li><h3>Sputnik V</h3></li></ul>
+                <p class="tes">
+                    Rusia se convirtió en el primer país en aprobar una vacuna, meses antes que otros países. Desde entonces, la vacuna Sputnik V ha sido aprobada para su uso en Bielorrusia, Argentina y Guinea. Científicos en Rusia y en el extranjero han cuestionado la decisión de aprobar la vacuna antes de los ensayos de la fase 3 que normalmente duran meses e involucran a miles de personas.<br>
+                    Desarrollada por el estatal Instituto de Investigación Gamaleya y el Ministerio de Salud de la Federación de Rusia, la producción de la vacuna está financiada por el Fondo de la Riqueza Soberana de Rusia (RDIF). Según la RDIF, la vacuna será fabricada por sus empresas asociadas en la India, China, Brasil, Corea del Sur y otros países. Más de 50 países han solicitado acceso a más de 1.200 millones de dosis de la vacuna, dijo la RDIF en un sitio web sobre Sputnik V.
+                </p>
+            
+                <ul><li><h3>Sinopharm</h3></li></ul>
+                <p class="tes">
+                    Los reguladores chinos dieron la semana pasada una aprobación "condicional" para una vacuna desarrollada por la unidad de Pekín de Sinopharm, o Grupo Farmacéutico Nacional de China, respaldado por el Estado. La vacuna está todavía en la fase final de los ensayos clínicos.<br>
+                    Aunque China se ha quedado atrás respecto a otros países en la aprobación formal de las vacunas contra el nuevo coronavirus, millones de personas –en gran parte miembros de grupos clave que incluyen a trabajadores de la salud, del sector alimentario y comunitarios– ya han sido vacunados como parte de un programa de emergencia. Ahora, el país se apresura a completar millones más antes del feriado del Año Nuevo Lunar en febrero, en el que cientos de millones de personas viajan a través de China. Una segunda vacuna candidata desarrollada por una unidad de Sinopharm en Wuhan, también en fase de pruebas clínicas, ya está en uso.<br>
+                    Los Emiratos Árabes Unidos aprobaron la vacuna de Pekín en diciembre y ya han recibido 3 millones de dosis, según el China National Biotec Group, una filial de Sinopharm. Bahrein también ha aprobado la vacuna y Pakistán ha dicho que comprará 1,2 millones de dosis, según Reuters.
+                    Se espera que la capacidad de producción anual de Sinopharm alcance los mil millones de dosis para finales del 2021, según el periódico estatal China Daily.
+                </p>
+            
+            
+                <ul><li><h3>Sinovac</h3></li></ul>
+                <p class="tes">
+                    Al igual que las vacunas de Sinopharm, la vacuna producida por la empresa biofarmacéutica Sinovac, con sede en Pekín, también está todavía en fase de prueba, pero ya se utiliza públicamente.
+            
+                    Una instalación de producción recientemente construida en Pekín es capaz de producir 300 millones de dosis al año, dijo el presidente y director ejecutivo de Sinovac, Yin Weidong, a la cadena de televisión estatal china CGTN.<br>
+                    Dosis ya han sido reservadas por Singapur, Turquía, Brasil, Chile e Indonesia. El país del sudeste asiático se prepara para una campaña de vacunación masiva.
+                
+                </p>
+            
+                <ul><li><h3>Covaxin</h3></li></ul>
+                <p class="tes">
+                    Desarrollada por la empresa india Bharat Biotech International, la vacuna Covaxin fue aprobada en la India el 3 de enero junto con la vacuna Oxford-AstraZeneca. Si bien el presidente de la India, Narendra Modi, calificó a la vacuna de "decisiva", expertos en salud han expresado dudas sobre los ensayos y su aprobación.<br>
+                    El presidente de Bharat Biotech, Krishna Ella, dijo a los periodistas que la autorización de emergencia es perfectamente válida en estas circunstancias y que ya hay 20 millones de dosis disponibles. La empresa se propone producir unos 700 millones de dosis este año en cuatro instalaciones de la India, dijo.<br>
+                    La India es uno de los países más afectados por la pandemia: unas 150.000 personas han muerto en la India a causa del nuevo coronavirus.
+                </p>
+        </div>
+
+        <div class="info-container">
+            <h2 id="Steps">Vacunacion en mexico</h2>
+            <div class="co"><img class="ima" src="https://heza.com.mx/wp-content/uploads/2021/03/9-MARZO-mexico-vacuna-covid-19.jpg" ></div>
+            <p class="tes">
+                Las autoridades sanitarias de México ya tienen listo el plan de vacunación contra el coronavirus en el país. Será un proceso largo que inicia desde finales del 2020 y se prolongará hasta los primeros meses del 2022.
+            
+            A través de la conferencia matutina del presidente  Andrés Manuel López Obrador, el secretario de Salud, Jorge Alcocer, detalló las fechas aproximadas y la logística que seguirá la campaña de inoculación para los poco más de 126 millones de habitantes.<br>
+            La meta, además de reducir las muertes por la enfermedad, consiste en inocular al 75% de la población a finales de 2021 de 16 y más años según la estrategia. Dentro de cada bloque de edad, tendrán atención urgente aquellos individuos con padecimientos crónicos (diabetes, hipertensión, tabaquismo, etc) y comorbilidades.
+            </p>
+            
+            <h2>¿C&oacutemo se aplicaran las vacunas?</h2>
+            <p class="tes">	Mexico al tener alcanze a las vacunas por medio de donaciones para provarlas se planearon varias etapas en donde se reparten las vacunas, partiende desde lo mas fundamental a lo general para poder lograr un mejor avanze en la pandemia y poder seguir a una vida normal.</p>
+            <ul><li><h3>Etapa 1</h3></li></ul>
+                <p class="tes">
+                    <i>Inicio:   </i> De diciembre de 2020 a febrero de 2021.<br>
+                    <i>Aquienes se aplicara:  </i>Personal de salud de primera línea de control de la COVID-19
+                </p>
+            
+                <ul><li><h3>Etapa 2</h3></li></ul>
+                <p class="tes">
+                    <i>Inicio:  </i> De febrero a abril de 2021.<br>
+                    <i>Aquienes se aplicara:  </i>Personal de salud restantes y personas de 60 años para arriba.
+                </p>
+            
+                <ul><li><h3>Etapa 3</h3></li></ul>
+                <p class="tes">
+                    <i>Inicio:  </i> De abril a mayo de 2021.<br>
+                    <i>Aquienes se aplicara:  </i>Personas de 50 a 59 años.
+                </p>
+            
+                <ul><li><h3>Etapa 4</h3></li></ul>
+                <p class="tes">
+                    <i>Inicio:  </i>De mayo a junio del 2021.<br>
+                    <i>Aquienes se aplicara:  </i>Personas de 40 a 49 años.
+                </p>
+            
+                <ul><li><h3>Etapa 5</h3></li></ul>
+                <p class="tes">
+                    <i>Inicio:  </i>De junio de 2021 a marzo del 2022.<br>
+                    <i>Aquienes se aplicara:  </i>Resto de la población.
+                </p>
+            
+                <p class="tes">Cabe recordar que, hasta ahora, las vacunas aprobadas son de dos dosis separadas. Por lo tanto, se asignan dos fechas diferentes para su aplicación que varían dependiendo cuál es (hay unas que requieren intervalos más cortos y otros más prolongados).</p>
+        </div>
     </main>
 
-    </div>
+    <footer>
+        <nav class="footer-nav">
+            <div class="container">
+                <ul class="row">
+                    <ul class="col">
+                        <span>Email</span>
+                        <li class="row"><p class="mail">angeltrek007@gmail.com</p> </li>
+                    </ul>
+                    <ul class="col">
+                        <span>Paginas</span>
+                        <li class="row"><a href="index.html">Inicio</a></li>
+                        <li class="row"><a href="vaccines.html">Vacunaci&oacuten</a></li>
+                        <li class="row"><a href="history.html">Historia</a></li>
+                        <li class="row"><a href="about.html">Acerca de</a></li>
+                    </ul>
+                    <ul class="col">
+                        <span>Historia</span>
+                        <li class="row"><a href="history.html#Origin">Origen</a></li>
+                        <li class="row"><a href="history.html#Actual">Actualidad</a></li>
+                        <li class="row"><a href="history.html#Quiz">Quiz</a></li>
+                    </ul>
+                    <ul class="col">
+                        <span>Vacunaci&oacuten</span>
+                        <li class="row"><a href="vaccines.html#Vaccines">Vacunas</a></li>
+                        <li class="row"><a href="vaccines.html#Steps">Etapas</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </nav>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="JS/main.js"></script>
 </body>
