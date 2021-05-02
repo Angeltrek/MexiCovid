@@ -73,8 +73,54 @@
         </div>
     </div>
 
-    <main>
-       <p></p>
+    <main class="container">
+
+        <div class="quiz container-lg">
+            <div class="quiz-rules">
+              <div>
+                <h4>Before you start the quiz, there are some rules</h4>
+              </div>
+
+              <div class="rule-list">
+                <ol>
+                  <li class="rule-item">There only are a correct answer</li>
+                  <li class="rule-item">Once you start, you can't stop the quiz</li>
+                  <li class="rule-item">Good luck</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="start-button" id="start"><button>START</button></div>
+
+            <div class="quiz-container">
+                <h6 id="stat" name="quiz-content"></h6>
+                <div class="questions">
+                  <h4 id="question" name="quiz-content">Placeholder?</h4>
+                  <ol>
+                    <li class="option">
+                      <span id="option0" name="quiz-content"></span>
+                    </li>
+                    <li class="option">
+                      <span id="option1" name="quiz-content"></span>
+                    </li>
+                    <li class="option">
+                      <span id="option2" name="quiz-content"></span>
+                    </li>
+                    <li class="option">
+                      <span id="option3" name="quiz-content"></span>
+                    </li>
+                  </ol>
+                </div>
+                <div class="buttons row">
+                  <button class="next col" id="nextQuestion">Next</button>
+                </div>
+                <div class="quiz-results row">
+                  <span class="col" id="results"></span>
+                  <button class="col" id="restart">Restart</button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     </div>
