@@ -61,6 +61,25 @@ for (var i = 0 ; i < subMenuBTN.length; i++) {
 
 }
 
+//suitable result
+
+const suitable_result = document.getElementById('suitablers');
+
+suitable_result.addEventListener('click', () =>{
+    var suitable_name = document.getElementById('suitable-name').value;
+    var suitable_age = document.getElementById('suitable-age').value.toString();
+    var msg = document.getElementById('msg');
+
+    msg.innerHTML = 'Hola ' + suitable_name; 
+
+    if(suitable_age >= '60') msg.innerHTML += ' Eres apto para aplicarte la vacuna contra el Covid-19, checa el centro de vacunacion más cercano';
+    else if(suitable_age >= '50') msg.innerHTML += ' Ya no falta mucho, puedes ir a recibir la vacuna durante mayo';
+    else if(suitable_age >= '40') msg.innerText += ' No te preocupes, tu rango de edad muestra menos complicaciones durante la enfermedad, puedes ir a recibir la vacuna durante mayo y junio';
+    else if(suitable_age < '40') msg.innerText += ' No deberias de preocuparte, no te encuentras en el rango de edad de las complicaciones, espera indicaciones de la vacunación';
+
+    document.querySelector('.suitable-message').classList.add('message-show');
+});
+
 //Quiz section
 
 var questionContainer = [
@@ -155,3 +174,16 @@ function res(){
 }
 
 displayQuestion();
+
+/* suitable validation*/
+
+
+/*
+    var suitable_name = document.getElementById('suitable-name').value;
+    var suitable_age = document.getElementById('suitable-age').value;
+    var msg = document.getElementById('msg');
+
+    msg.innerHTML = 'Hola ' + suitable_name; 
+
+    
+    */ 
