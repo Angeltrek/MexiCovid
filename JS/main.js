@@ -38,47 +38,32 @@ btnMenu.addEventListener("click",function(){
 
 const subMenuBTN=document.querySelectorAll(".submenu-btn");
 //Se ocupa el ciclo for para detectar que submenu es y hacer la operacion
-for (var i = 0 ; i < subMenuBTN.length; i++) {
-    subMenuBTN[i].addEventListener("click",function(){
-                //Que solo se realize la accion cuando la pantalla sea menor a la de una PC
-            if (window.innerWidth<1024) {
-                //Del "submenu-btn" al submenu que le sigue, es decir a su hermano
-                const subMENU=this.nextElementSibling;
-                //Alto de eleemento
-                const height= subMENU.scrollHeight;
-                //la clase "desplegar" no existe pero se ocuppa para identificar si despliegue del submenu
-            if (subMENU.classList.contains("desplegar")) {
-                subMENU.classList.remove("desplegar");
-                subMENU.removeAttribute("style");
-            }else{
-                subMENU.classList.add("desplegar");
-                    //Se agrega el alto
-                subMENU.style.height=height+"px";
+function nav () {
+    for (var i = 0 ; i < subMenuBTN.length; i++) {
+        subMenuBTN[i].addEventListener("click",function(){
+                    //Que solo se realize la accion cuando la pantalla sea menor a la de una PC
+                if (window.innerWidth<1024) {
+                    //Del "submenu-btn" al submenu que le sigue, es decir a su hermano
+                    const subMENU=this.nextElementSibling;
+                    //Alto de eleemento
+                    const height= subMENU.scrollHeight;
+                    //la clase "desplegar" no existe pero se ocuppa para identificar si despliegue del submenu
+                if (subMENU.classList.contains("desplegar")) {
+                    subMENU.classList.remove("desplegar");
+                    subMENU.removeAttribute("style");
+                }else{
+                    subMENU.classList.add("desplegar");
+                        //Se agrega el alto
+                    subMENU.style.height=height+"px";
+                }
+                
             }
-            
-        }
-    });
+        });
+    
+    }
+};
 
-}
-
-//suitable result
-
-const suitable_result = document.getElementById('suitablers');
-
-suitable_result.addEventListener('click', () =>{
-    var suitable_name = document.getElementById('suitable-name').value;
-    var suitable_age = document.getElementById('suitable-age').value.toString();
-    var msg = document.getElementById('msg');
-
-    msg.innerHTML = 'Hola ' + suitable_name; 
-
-    if(suitable_age >= '60') msg.innerHTML += ' Eres apto para aplicarte la vacuna contra el Covid-19, checa el centro de vacunacion más cercano';
-    else if(suitable_age >= '50') msg.innerHTML += ' Ya no falta mucho, puedes ir a recibir la vacuna durante mayo';
-    else if(suitable_age >= '40') msg.innerText += ' No te preocupes, tu rango de edad muestra menos complicaciones durante la enfermedad, puedes ir a recibir la vacuna durante mayo y junio';
-    else if(suitable_age < '40') msg.innerText += ' No deberias de preocuparte, no te encuentras en el rango de edad de las complicaciones, espera indicaciones de la vacunación';
-
-    document.querySelector('.suitable-message').classList.add('message-show');
-});
+nav();
 
 //Quiz section
 
@@ -141,7 +126,7 @@ function displayQuestion(){
      options,option2.innerHTML = questionContainer[i].options[1];
      options,option3.innerHTML = questionContainer[i].options[2];
      options,option4.innerHTML = questionContainer[i].options[3];
-}
+};
 
 function nextQuestion(){
     if(i < questionContainer.length-1){
@@ -149,7 +134,7 @@ function nextQuestion(){
         displayQuestion();
         stat.innerHTML = i+1 + ' / ' + quiz_length;
     }
-}
+};
 
 goNext.addEventListener('click', () => {
     nextQuestion();
@@ -163,7 +148,7 @@ start.addEventListener('click', () =>{
     res();
     quiz_container.classList.toggle('show');
     stat.innerHTML = i+1 + " / " + quiz_length;
-})
+});
 
 function res(){
     i = 0;
@@ -171,6 +156,25 @@ function res(){
     stat.innerHTML = '1 / ' + quiz_length;
     results.innerHTML = correct + ' / ' + quiz_length;
     displayQuestion();
-}
+};
 
 displayQuestion();
+
+//suitable result
+
+const suitablers = document.getElementById('suitablers');
+
+suitablers.addEventListener('click', () => {
+    var suitable_name = document.getElementById('suitable-name').value;
+    var suitable_age = document.getElementById('suitable-age').value.toString();
+    var msg = document.getElementById('msg');
+
+    msg.innerHTML = 'Hola ' + suitable_name; 
+
+    if(suitable_age >= '60') msg.innerHTML += ' Eres apto para aplicarte la vacuna contra el Covid-19, checa el centro de vacunacion más cercano';
+    else if(suitable_age >= '50') msg.innerHTML += ' Ya no falta mucho, puedes ir a recibir la vacuna durante mayo';
+    else if(suitable_age >= '40') msg.innerText += ' No te preocupes, tu rango de edad muestra menos complicaciones durante la enfermedad, puedes ir a recibir la vacuna durante mayo y junio';
+    else if(suitable_age < '40') msg.innerText += ' No deberias de preocuparte, no te encuentras en el rango de edad de las complicaciones, espera indicaciones de la vacunación';
+
+    document.querySelector('.suitable-message').classList.add('message-show');
+});
