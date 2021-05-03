@@ -133,7 +133,7 @@ options.forEach(getAns =>{
             nextQuestion();
         }
     });
-})
+});
 
 function displayQuestion(){
      question.innerHTML = questionContainer[i].question;
