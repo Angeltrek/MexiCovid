@@ -174,16 +174,3 @@ function res(){
 }
 
 displayQuestion();
-
-/* suitable validation*/
-
-
-/*
-    var suitable_name = document.getElementById('suitable-name').value;
-    var suitable_age = document.getElementById('suitable-age').value;
-    var msg = document.getElementById('msg');
-
-    msg.innerHTML = 'Hola ' + suitable_name; 
-
-    
-    */ 
